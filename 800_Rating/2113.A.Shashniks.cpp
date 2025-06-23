@@ -3,7 +3,11 @@ using namespace std;
 
 typedef long long ll;
 
-ll max_shashliks(ll k, ll a, ll b, ll x, ll y) {
+void solve() {
+    
+    ll k,a,b,x,y;
+    cin >> k >> a >> b >> x >> y; 
+    
     // Prefer the type with smaller temperature drop
     if (x > y) {
         swap(a, b);
@@ -23,7 +27,8 @@ ll max_shashliks(ll k, ll a, ll b, ll x, ll y) {
         cnt2 = (k - b) / y + 1;
     }
 
-    return cnt1 + cnt2;
+
+    cout << cnt1 + cnt2 << nline;
 }
 
 int main() {
